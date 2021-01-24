@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body>
+  <body class="flex-column min-100-vh">
     <header class="header">
       <div>
         <h1 class="header-text">Weather Dashboard</h1>
@@ -26,10 +26,28 @@
             <button type="submit" class="btn">Get Forecast</button>
           </form>
         </div>
+        <div class="card">
+          <h3 class="card-header">Popular Cities:</h3>
+          <div class="card-body" id="city-buttons">
+            <!-- BUTTONS FOR CITY SELECTION-->
+          <button city="Austin" class="btn">Austin</button>
+          <button city="Chicago" class="btn">Chicago</button>
+          <button city="New York" class="btn">New York</button>
+          <button city="Orlando" class="btn">Orlando</button>
+          <button city="San Fransisco" class="btn">San Fransisco</button>
+          <button city="Seattle" class="btn">Seattle</button>
+          <button city="Denver" class="btn">Denver</button>
+          <button city="Atlanta" class="btn">Atlanta</button>
+        </div>
+        </div>
       </div>
 
       <!-- SECOND COLUMN-->
       <div class="col-12 col-md-8">
+        <div>
+          <p>PLACEHOLDER</p>
+        </div>
+        
       </div>
     </main>
 
