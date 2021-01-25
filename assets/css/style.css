@@ -9,7 +9,55 @@ ul {
 }
 
 .card-weather ul {
-    padding: 5px 5px;
+  color: white;
+  padding: 5px 5px;
+}
+
+.flex-container {
+  display: flex;
+  padding: 15px 15px;
+  margin-bottom: 100px;
+}
+
+.flex-child {
+  flex: 1;
+  height: 200px;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  border: 1px solid  rgb(20.4, 22.7, 25.1);
+  background-color: white;
+  border-radius: 5px;
+}
+
+.flex-child:first-child {
+  margin-right: 20px;
+} 
+
+.flex-child-last {
+  flex: 1;
+  border: 1px solid  rgb(20.4, 22.7, 25.1);
+  background-color: white;
+  border-radius: 5px;
+} 
+
+.red {
+  color: white;
+  background-color: red;
+  padding: 5px 5px;
+}
+
+.green {
+  background-color: green;
+  padding: 5px 5px;
+}
+
+.yellow {
+  color: black;
+  background-color: yellow;
+  padding: 5px 5px;
 }
 
 li {
@@ -18,7 +66,7 @@ li {
 }
 
 body {
-  background-color: rgb(167, 167, 167);
+  background-color: rgb(104, 104, 104);
   margin: 0;
   padding: 0;
   font-family: "IBM Plex Sans", sans-serif;
@@ -33,6 +81,8 @@ body {
   justify-content: center;
   height: 60px;
   background-color: rgb(20.4, 22.7, 25.1);
+  margin-bottom: 10px;
+  border-bottom: 3px solid blue;
 }
 
 .header h1 {
@@ -45,6 +95,7 @@ body {
   width: 100%;
   padding: 10px 20px;
   font-weight: bold;
+  border-radius: 1px;
 }
 
 input {
@@ -56,8 +107,8 @@ input {
 }
 
 .card-weather {
-    padding: 15px 15px;
-  }
+  padding: 15px 15px;
+}
 
 .card-header {
   display: flex;
@@ -65,6 +116,7 @@ input {
   justify-content: center;
   background-color: rgb(20.4, 22.7, 25.1);
   color: white;
+  border-radius: 3px;
 }
 
 .card h3 {
@@ -76,8 +128,7 @@ input {
   padding: 3%;
   margin: 5px 0;
   font-size: 1.2rem;
-  border: 1px solid rgb(20.4, 22.7, 25.1);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 #recent-search {
@@ -88,11 +139,12 @@ input {
 }
 
 #footer {
-  height: 2rem;
+  height: 5rem;
   background-color: rgb(20.4, 22.7, 25.1);
   position: fixed;
   bottom: 0;
   width: 100%;
+  border-top: 3px solid blue;
 }
 
 .flex-row {

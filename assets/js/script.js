@@ -40,21 +40,33 @@ var getCurrentWeatherInformation = function (city) {
             response.json().then(function (data) {
                 console.log(data);
                 weatherHeader.textContent = "Current Weather Information For: " + data.name + ", " + data.sys.country;
-                weatherForcast.textContent =  data.name + ", " + data.sys.country + " - (5) Day Forecast";
+                weatherForcast.textContent = data.name + ", " + data.sys.country + " - (5) Day Forecast";
                 displayCurrentWeatherInformation(data);
             })
         }
     })
 }
 
-// ex.            http://api.openweathermap.org/data/2.5/uvi?lat=41.85&lon=-87.65&appid=405923b58d900672fd4f4879eac1f822
+// ex. http://api.openweathermap.org/data/2.5/uvi?lat=41.85&lon=-87.65&appid=405923b58d900672fd4f4879eac1f822
 var getUvIndex = function (lat, lon) {
     var apiUrl = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&" + appId;
+    var spanIndex = "<b>UV Index: </>"
+    var spanClassB = "";
+    var spanClassE = "</span>";
 
     fetch(apiUrl).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
-                document.getElementById("weather-field-uv-index").innerHTML = "<b>UV Index: </b>" + data.value;
+                var uv = data.value;
+
+                if (uv > 4) {
+                    spanClassB = "<span class='red'>";
+                } else if (uv < 1) {
+                    spanClassB = "<span class='green'>";
+                } else {
+                    spanClassB = "<span class='yellow'>";
+                }
+                document.getElementById("weather-field-uv-index").innerHTML = spanIndex + spanClassB + data.value + spanClassE;
             })
         }
     })
@@ -62,9 +74,7 @@ var getUvIndex = function (lat, lon) {
 
 
 var displayCurrentWeatherInformation = function (data) {
-
     var today = getTodaysDate(data.dt);
-
     document.getElementById("weather-field-city-time").innerHTML = "<b>" + data.name + ", " + data.sys.country + "</b> (" + today + ")";
     var temp = convertTemp(data.main.temp);
     document.getElementById("weather-field-temperature").innerHTML = "<b>Temperature: </b>" + temp + " &#x2109";
