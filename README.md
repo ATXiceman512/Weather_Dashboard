@@ -25,8 +25,11 @@ WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 
 ## Screenshots for application
-<!-- NEED TO ADD AFTER COMPLETED -->
 
+### Screenshot of the dashboard
+![Index.html(FrontEnd) screenshot](./assets/img/main_dashboard.PNG "Main Dashboard")
 
+### Screenshot of the current weather portion
+![Index.html(FrontEnd) screenshot](./assets/img/current_weather_portion.PNG "Image upon selection of city or user input")
 
 

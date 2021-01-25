@@ -47,9 +47,9 @@ var getCurrentWeatherInformation = function (city) {
     })
 }
 
-// ex. http://api.openweathermap.org/data/2.5/uvi?lat=41.85&lon=-87.65&appid=405923b58d900672fd4f4879eac1f822
+// ex. https://api.openweathermap.org/data/2.5/uvi?lat=41.85&lon=-87.65&appid=405923b58d900672fd4f4879eac1f822
 var getUvIndex = function (lat, lon) {
-    var apiUrl = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&" + appId;
+    var apiUrl = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&" + appId;
     var spanIndex = "<b>UV Index: </>"
     var spanClassB = "";
     var spanClassE = "</span>";
