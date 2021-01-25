@@ -34,23 +34,43 @@
           <button city="Chicago" class="btn">Chicago</button>
           <button city="New York" class="btn">New York</button>
           <button city="Orlando" class="btn">Orlando</button>
-          <button city="San Fransisco" class="btn">San Fransisco</button>
+          <button city="San Francisco" class="btn">San Francisco</button>
           <button city="Seattle" class="btn">Seattle</button>
           <button city="Denver" class="btn">Denver</button>
           <button city="Atlanta" class="btn">Atlanta</button>
+        </div>
+        </div>
+        <div class="card">
+          <h3 class="card-header">Recent Searches:</h3>
+          <div class="card-body" id="recent-search-body">
+            <ul id="recent-search">
+              <li>Placeholder 1</li>
+              <li>Placeholder 2</li>
+            </ul>
         </div>
         </div>
       </div>
 
       <!-- SECOND COLUMN-->
       <div class="col-12 col-md-8">
-        <div>
-          <p>PLACEHOLDER</p>
+        <div class="card">
+          <h3 class="card-header" id="weather-header-info">Select City to Display Weather Information</h3>
         </div>
-        
+        <div class="card-weather">
+          <ul id="weather-field-city-time"></ul>
+          <ul id="weather-field-temperature"></ul>
+          <ul id="weather-field-humidity"></ul>
+          <ul id="weather-field-wind-speed"></ul>
+          <ul id="weather-field-uv-index"></ul>
+        </div>
+        <div class="card">
+          <h3 class="card-header" id="weather-header-forcast">Select City to See 5-Day forecast</h3>
+        </div>
+        </div>
       </div>
     </main>
 
+    <footer id="footer"></footer>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
